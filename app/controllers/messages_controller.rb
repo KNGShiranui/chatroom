@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
       @messages = @conversation.messages
   
       if @messages.length > 10
-        @over_ten = true1
+        @over_ten = true
         @messages = Message.where(id: @messages[-10..-1].pluck(:id))
       end
   
